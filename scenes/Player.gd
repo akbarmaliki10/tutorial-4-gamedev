@@ -20,13 +20,13 @@ func get_input():
 
 
 func _physics_process(_delta):
-	velocity.y += delta * GRAVITY
+	velocity.y += _delta * GRAVITY
 	get_input()
 	velocity = move_and_slide(velocity, UP)
 
 
 func _process(_delta):
-	if velocity.y != 0:
+	if velocity.y != 0 and not is_on_floor():
 		$Animator.play("Jump")
 	elif velocity.x != 0:
 		$Animator.play("Walk")
