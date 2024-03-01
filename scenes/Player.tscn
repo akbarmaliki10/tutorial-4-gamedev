@@ -74,4 +74,4 @@ anims/Walk = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
-zoom = Vector2( 3, 1 )
+zoom = Vector2( -1, -1 )
